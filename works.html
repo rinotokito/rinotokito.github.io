@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Works | Rino Tokito</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <nav class="side-nav">
+    <a href="index.html">Home</a>
+   <a href="biography.html">Biography &amp; Statement</a>
+    <a href="works.html">Works</a>
+    <a href="mailto:yourname@example.com">Contact</a>
+  </nav>
+
+  <main class="main">
+    <h1>Works</h1>
+
+   <div class="works-grid">
+
+  <figure class="work">
+    <img src="images/work1.jpg" alt="Artwork"class="work-image">
+    <figcaption>
+      Untitled, 2025<br>
+      Mixed media on canvas
+    </figcaption>
+  </figure>
+
+  <figure class="work">
+    <img src="images/work2.jpg" alt="Artwork"class="work-image">
+    <figcaption>
+      Untitled, 2025<br>
+      Mixed media on canvas
+    </figcaption>
+  </figure>
+
+  <figure class="work">
+    <img src="images/work3.jpg" alt="Artwork"class="work-image">
+    <figcaption>
+      Untitled, 2025<br>
+      Mixed media on canvas
+    </figcaption>
+  </figure>
+
+</div>
+
+  </main>
+
+</body>
+<div id="lightbox">
+  <img id="lightbox-img" src="">
+</div>
+
+<script>
+  const images = document.querySelectorAll('.work-image');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'block';
+      lightbox.scrollTop = 0;
+    });
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
+
+</html>
